@@ -11,6 +11,11 @@ begin
     gem.homepage = 'http://github.com/okitan/croquette'
     gem.authors = ['okitan']
 
+    [ [ 'rack', '>= 1.2.1'],
+    ].each do |name, version|
+      gem.add_dependency name, version
+    end
+    
     gem.add_development_dependency 'rspec', '>= 1.3.0'
   end
   Jeweler::GemcutterTasks.new
