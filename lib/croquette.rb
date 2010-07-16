@@ -1,5 +1,5 @@
 require 'croquette/rack/builder' # add Rack::Builder#croquette
-require 'croquette/mincer'
+require 'croquette/cooker'
 require 'croquette/exceptions'
 
 module Croquette
