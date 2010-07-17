@@ -7,10 +7,10 @@ end
 
 module Rack
   class Builder
-    def croquette(&block)
+    def fry(&block)
       raise 'croquette should be called with block' unless block_given?
 
-      Croquette::Mincer.parse(&block)
+      Croquette::Mincer.mince(&block)
     end
   end
 end
