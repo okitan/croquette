@@ -10,7 +10,11 @@ module Rack
     def fry(&block)
       raise 'croquette should be called with block' unless block_given?
 
-      Croquette::Mincer.mince(&block)
+      Croquette::Mincer.mince(&block).each do |name, app|
+        map name do
+          run app
+        end
+      end
     end
   end
 end
